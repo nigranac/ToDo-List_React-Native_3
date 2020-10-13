@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   },
   InputStyle: {
     backgroundColor: '#ECEFF1',
-    borderRadius: 10,
+    borderRadius: 12,
     width: Dimensions.get('window').width * 0.8,
     height: Dimensions.get('window').height * 0.05,
     alignSelf: 'center',
