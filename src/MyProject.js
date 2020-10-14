@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   todoText: {
     color: 'white',
     fontSize: 25,
-    padding: 15,
+    paddingLeft: 15,
   },
   InputStyle: {
     backgroundColor: '#ECEFF1',
