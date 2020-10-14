@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 25,
     paddingLeft: 15,
+    paddingTop:8
   },
   InputStyle: {
     backgroundColor: '#ECEFF1',
