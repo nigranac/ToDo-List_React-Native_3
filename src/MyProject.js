@@ -15,7 +15,11 @@ import {
 
 
 
-const liste = [];
+const liste = [
+  'Do a project with CodeHackers 🔥',
+  'Teamwork with LightHouse 🕯🏠 or 🔦',
+  'Tell your project to Code47 🕶',
+];
 
 const MyProject = () => {
   const [text, setText] = useState('');
