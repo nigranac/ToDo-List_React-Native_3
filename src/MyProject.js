@@ -52,14 +52,32 @@ const MyProject = () => {
       </ScrollView>
       <View style={styles.container}>
         <TextInput
+          returnKeyType={'can'}
+          blurOnSubmit={false}
+          onSubmitEditing={() =>
+            text == ''
+              ? console.warn('Please enter a todo')
+              : addItem(liste.push(text) && setText(''))
+          }
           onChangeText={(text) => setText(text)}
           defaultValue={text}
           style={styles.InputStyle}
         />
         <TouchableOpacity
-          onPress={() => addItem(liste.push(text) && setText(''))}
-          style={styles.generalStyle}>
-          <Text style={styles.textStyle}>ADD TODO</Text>
+          onPress={() =>
+            text == ''
+              ? console.warn('Please enter a todo')
+              : addItem(liste.push(text) && setText(''))
+          }
+          style={styles.addButton}>
+          <Text style={styles.textButton}>ADD TODO</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.addButton}
+          onPress={() => {
+            delItem(liste.splice(0));
+          }}>
+          <Text style={styles.textButton}>RESET</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
