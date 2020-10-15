@@ -24,18 +24,14 @@ const liste = [
 const MyProject = () => {
   const [text, setText] = useState('');
   const [,addItem] = useState();
+  const [, delItem] = useState();
 
   return (
     <SafeAreaView style={styles.general}>
-      <View>
-        <Text
-          style={{
-            color: 'orange',
-            fontSize: 50,
-            textAlign: 'center',
-            fontWeight: 'bold',
-          }}>
-          MY TODO
+      <View style={styles.header}>
+        <Text style={styles.headerText}>TODO</Text>
+        <Text style={{fontSize: 40, color: 'orange', paddingRight: 10}}>
+          {liste.length}
         </Text>
       </View>
       <ScrollView>
