@@ -13,7 +13,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import {MyButton, MyInput, MyToDo} from './components';
+
 
 const liste = [];
 
