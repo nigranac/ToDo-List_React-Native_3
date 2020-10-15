@@ -35,11 +35,16 @@ const MyProject = () => {
         </Text>
       </View>
       <ScrollView>
-        <View>
+      <View>
           {liste.map((item) => {
             return (
               <View style={styles.todoContainer}>
                 <Text style={styles.todoText}>{item}</Text>
+                <TouchableOpacity
+                  onPress={() => delItem(liste.splice(liste.indexOf(item), 1))}
+                  style={styles.delButton}>
+                  <Text style={styles.delText}>X</Text>
+                </TouchableOpacity>
               </View>
             );
           })}
